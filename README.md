@@ -27,9 +27,6 @@ Back up original files first, then replace both files:
 
 ## Paint colors: exact meaning in this mod
 
-You are right: generic names like "green"/"blue" are ambiguous.
-This README now uses the swatch images from `/colours` instead of hex values.
-
 Palette reference (top = lightest row, bottom = darkest row):
 
 ![Scrap Mechanic paint palette](https://github.com/user-attachments/assets/0eae92e9-ff5d-4402-b142-1f76cc6357e1)
