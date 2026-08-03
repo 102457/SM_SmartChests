@@ -34,13 +34,13 @@ Palette reference (top = lightest row, bottom = darkest row):
 
 ![Scrap Mechanic paint palette](https://github.com/user-attachments/assets/0eae92e9-ff5d-4402-b142-1f76cc6357e1)
 
-**Note:** earlier versions of this mod turned the 20 lightest/darkest swatches into a "single-item" filter — whichever item was inserted first became the only item that chest would accept. That mechanic has been **removed**. All 20 of those swatches (plus 20 more) are now ordinary category colors, listed below, so they behave predictably instead of depending on insertion order.
+**Note:** earlier versions of this mod turned the 20 lightest/darkest swatches — ![White](colours/01_White.png) ![Pale Yellow](colours/02_Pale_Yellow.png) ![Pale Lime](colours/03_Pale_Lime.png) ![Pale Green](colours/04_Pale_Green.png) ![Pale Cyan](colours/05_Pale_Cyan.png) ![Pale Blue](colours/06_Pale_Blue.png) ![Pale Violet](colours/07_Pale_Violet.png) ![Pale Pink](colours/08_Pale_Pink.png) ![Pale Rose](colours/09_Pale_Rose.png) ![Pale Orange](colours/10_Pale_Orange.png) ![Dark Gray](colours/31_Dark_Gray.png) ![Dark Olive](colours/32_Dark_Olive.png) ![Forest](colours/33_Forest.png) ![Bottle Green](colours/34_Bottle_Green.png) ![Dark Teal](colours/35_Dark_Teal.png) ![Navy](colours/36_Navy.png) ![Indigo](colours/37_Indigo.png) ![Plum](colours/38_Plum.png) ![Maroon](colours/39_Maroon.png) ![Dark Brown](colours/40_Dark_Brown.png) — into a "single-item" filter: whichever item was inserted first became the only item that chest would accept. **That mechanic has been removed.** All 40 swatches in the palette are now ordinary category colors (see the full list below), so a chest's behavior is predictable from its paint alone instead of depending on insertion order.
 
 ### Category chest colors (priority 2)
 
-Paint a chest with any of the hex colors below to restrict it to that category. A chest's paint color is matched by exact hex value (including alpha, e.g. `4a4a4aff`) — the headers below show the color without the trailing alpha byte for readability.
+Paint a chest with any of the swatches below to restrict it to that category. Matching is done by exact paint hex value (including alpha, e.g. `4a4a4aff`).
 
-One color, `#EEAF5C`, is reserved and currently unused (freed up when `scrap.json` was merged into the vehicle parts category) — painting a chest with it has no special filtering effect.
+![Pale Orange](colours/10_Pale_Orange.png) Pale Orange (`eeaf5cff`) is reserved and currently unused (freed up when `scrap.json` was merged into the vehicle parts category) — painting a chest with it has no special filtering effect. Every other one of the 40 palette swatches now maps to a category.
 
 ## Priority order in-game
 
@@ -60,23 +60,23 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_consumable_water` -> `obj_container_water`
 - `obj_plantables_potato` -> `obj_container_ammo` (potatoes are spudgun ammo)
 - `obj_consumable_fertilizer` -> `obj_container_fertilizer`
-- all 12 `seeds.json` items -> `obj_container_seed`, individually:
-- `obj_seed_banana` -> `obj_container_seed`
-- `obj_seed_blueberry` -> `obj_container_seed`
-- `obj_seed_orange` -> `obj_container_seed`
-- `obj_seed_pineapple` -> `obj_container_seed`
-- `obj_seed_carrot` -> `obj_container_seed`
-- `obj_seed_redbeet` -> `obj_container_seed`
-- `obj_seed_tomato` -> `obj_container_seed`
-- `obj_seed_broccoli` -> `obj_container_seed`
-- `obj_seed_potato` -> `obj_container_seed`
-- `obj_seed_cotton` -> `obj_container_seed`
-- `obj_seed_pigmentflower` -> `obj_container_seed`
-- `obj_seed_chili` -> `obj_container_seed`
+- all 12 `seeds.json` items -> `obj_container_seed`:
+  - `obj_seed_banana`
+  - `obj_seed_blueberry`
+  - `obj_seed_orange`
+  - `obj_seed_pineapple`
+  - `obj_seed_carrot`
+  - `obj_seed_redbeet`
+  - `obj_seed_tomato`
+  - `obj_seed_broccoli`
+  - `obj_seed_potato`
+  - `obj_seed_cotton`
+  - `obj_seed_pigmentflower`
+  - `obj_seed_chili`
 
 ## Full category lists (exact values from `pipes.lua`)
 
-### `#4A4A4A` Metal blocks
+### ![Gray](colours/21_Gray.png) Metal blocks
 - `blk_metal1`
 - `blk_metal2`
 - `blk_metal3`
@@ -96,7 +96,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `blk_spaceshipfloor`
 - `blk_warehousefloor`
 
-### `#0E8031` Wood blocks
+### ![Dark Green](colours/24_Dark_Green.png) Wood blocks
 - `blk_cardboard`
 - `blk_wood1`
 - `blk_wood2`
@@ -104,7 +104,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `blk_scrapwood`
 - `blk_caution`
 
-### `#817C00` Stone/Glass/Tiles blocks
+### ![Dark Yellow](colours/22_Dark_Yellow.png) Stone/Glass/Tiles blocks
 - `blk_sand`
 - `blk_concrete1`
 - `blk_concrete2`
@@ -118,7 +118,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `blk_crackedconcrete`
 - `blk_concretetiles`
 
-### `#577D07` Other blocks (carpet/plastic/etc.)
+### ![Olive](colours/23_Olive.png) Other blocks (carpet/plastic/etc.)
 - `blk_carpet`
 - `blk_plastic`
 - `blk_bubblewrap`
@@ -128,7 +128,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `blk_fancycarpet`
 - `blk_ice`
 
-### `#0F2E91` Pipes & fittings
+### ![Dark Blue](colours/26_Dark_Blue.png) Pipes & fittings
 - `obj_fittings_ductshort`
 - `obj_fittings_ductlong`
 - `obj_fittings_ductbend`
@@ -191,7 +191,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_fittings_generatorpipesplit`
 - `obj_fittings_generatorpipemulti`
 
-### `#7C0000` Vehicle parts
+### ![Dark Red](colours/29_Dark_Red.png) Vehicle parts
 - `obj_interactive_driversaddle_01`
 - `obj_interactive_driversaddle_02`
 - `obj_interactive_driversaddle_03`
@@ -251,7 +251,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_scrap_seat`
 - `obj_scrap_smallwheel`
 
-### `#673B00` Logic parts
+### ![Brown](colours/30_Brown.png) Logic parts
 - `obj_interactive_controller_01`
 - `obj_interactive_controller_02`
 - `obj_interactive_controller_03`
@@ -272,7 +272,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_interactive_logicgate`
 - `obj_interactive_timer`
 
-### `#118787` Industrial structural
+### ![Teal](colours/25_Teal.png) Industrial structural
 - `obj_industrial_beam`
 - `obj_industrial_beamlong`
 - `obj_industrial_beambend`
@@ -339,7 +339,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_industrial_powerswitch`
 - `obj_industrial_powerholders`
 
-### `#500AA6` Casted & construction parts
+### ![Dark Violet](colours/27_Dark_Violet.png) Casted & construction parts
 - `obj_castedpart_t1`
 - `obj_castedpart_t2`
 - `obj_castedpart_t3`
@@ -367,7 +367,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_construction_paintcan`
 - `obj_construction_stairs`
 
-### `#720A74` Craftbot components
+### ![Dark Magenta](colours/28_Dark_Magenta.png) Craftbot components
 - `obj_craftbot_cookbot`
 - `obj_craftbot_craftbot1`
 - `obj_craftbot_craftbot2`
@@ -382,7 +382,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_vehicle_gripwheel_x9`
 - `obj_rewards_lowriderwheel`
 
-### `#7F7F7F` Tools
+### ![Light Gray](colours/11_Light_Gray.png) Tools
 - `obj_tool_bucket_empty`
 - `obj_tool_bucket_water`
 - `obj_tool_bucket_chemical`
@@ -410,18 +410,18 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_tool_scrap_spudgun`
 - `obj_tool_launcher`
 
-### `#E2DB13` Power tools
+### ![Yellow](colours/12_Yellow.png) Power tools
 - `obj_powertools_sawblade`
 - `obj_powertools_drill`
 - `obj_interactive_plasmadrill_lvl1`
 - `obj_interactive_plasmadrill_lvl2`
 - `obj_interactive_plasmadrill_lvl3`
 
-### `#A0EA00` Robot parts
+### ![Lime](colours/13_Lime.png) Robot parts
 - `obj_robotparts_tapebotshooter`
 - `obj_robotparts_minerbot_thruster`
 
-### `#19E753` Vehicle attachments
+### ![Green](colours/14_Green.png) Vehicle attachments
 - `obj_vehicle_smallwheel`
 - `obj_vehicle_bigwheel`
 - `obj_vehicle_license_plate`
@@ -430,13 +430,13 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_vehicle_wheelhousecorner`
 - `obj_vehicle_concavewedge`
 
-### `#2CE6E6` Appliances
+### ![Cyan](colours/15_Cyan.png) Appliances
 - `obj_interactive_fridge`
 - `obj_interactive_locker`
 - `obj_interactive_filecabinet`
 - `obj_interactive_stafftoilet`
 
-### `#0A3EE2` Building fixtures
+### ![Blue](colours/16_Blue.png) Building fixtures
 - `obj_building_barracksupport`
 - `obj_building_barracksupportlong`
 - `obj_building_barracksupportturn`
@@ -448,7 +448,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_building_plunger`
 - `obj_building_sink`
 
-### `#7514ED` Container items
+### ![Violet](colours/17_Violet.png) Container items
 - `obj_container_gas`
 - `obj_container_water`
 - `obj_container_fertilizer`
@@ -463,7 +463,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_container_XXL_chest`
 - `obj_container_smallchest_pipe`
 
-### `#CF11D2` Survival/facility gear
+### ![Magenta](colours/18_Magenta.png) Survival/facility gear
 - `obj_survivalobject_keycard`
 - `obj_survivalobject_cardreader`
 - `obj_survivalobject_cardreader_arm`
@@ -513,7 +513,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_survivalobject_vendor`
 - `obj_interactive_bed_tutorial`
 
-### `#D02525` Wedges (all materials)
+### ![Red](colours/19_Red.png) Wedges (all materials)
 - `wdg_concrete1`
 - `wdg_wood1`
 - `wdg_metal1`
@@ -561,7 +561,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `wdg_ice`
 - `wdg_dekotora`
 
-### `#DF7F00` Structural/architecture blocks
+### ![Orange](colours/20_Orange.png) Structural/architecture blocks
 - `obj_structure_postalcrate`
 - `obj_structure_freightshell`
 - `obj_structure_freightcrate`
@@ -679,7 +679,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `blk_undergroundstation2x`
 - `blk_undergroundstation4x`
 
-### `#EEEEEE` Ores & nuggets
+### ![White](colours/01_White.png) Ores & nuggets
 - `obj_nugget_t1`
 - `obj_nugget_t2`
 - `obj_nugget_t3`
@@ -691,7 +691,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_moltenorb_t4`
 - `obj_moltenorb_t5`
 
-### `#F5F071` Raw gems & crystals
+### ![Pale Yellow](colours/02_Pale_Yellow.png) Raw gems & crystals
 - `obj_resource_quartz`
 - `obj_resource_coralium`
 - `obj_resource_nimbolium`
@@ -704,7 +704,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_resource_refinedsapphire`
 - `obj_resource_refinedcrystal`
 
-### `#CBF66F` Organic resources
+### ![Pale Lime](colours/03_Pale_Lime.png) Organic resources
 - `obj_resource_beewax`
 - `obj_resource_ember`
 - `obj_resource_crudeoil`
@@ -727,7 +727,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_resource_drillcasingmixedt4`
 - `obj_resource_drillcasingmixedrich`
 
-### `#68FF88` Harvestable chunks
+### ![Pale Green](colours/04_Pale_Green.png) Harvestable chunks
 - `obj_harvest_wood`
 - `obj_harvest_wood2`
 - `obj_harvest_metal`
@@ -754,7 +754,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_harvests_nonepart_tier5_p07`
 - `obj_harvests_nonepart_tier5_p08`
 
-### `#7EEDED` Stone parts/rubble
+### ![Pale Cyan](colours/05_Pale_Cyan.png) Stone parts/rubble
 - `obj_harvests_stones_p01`
 - `obj_harvests_stones_p02`
 - `obj_harvests_stones_p03`
@@ -765,7 +765,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_harvest_stonechunk02`
 - `obj_harvest_stonechunk03`
 
-### `#4C6FE3` Crops (plantables)
+### ![Pale Blue](colours/06_Pale_Blue.png) Crops (plantables)
 - `obj_plantables_banana`
 - `obj_plantables_blueberry`
 - `obj_plantables_orange`
@@ -777,7 +777,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_plantables_potato`
 - `obj_plantables_chili`
 
-### `#AE79F0` Food & drink
+### ![Pale Violet](colours/07_Pale_Violet.png) Food & drink
 - `obj_consumable_sunshake`
 - `obj_consumable_carrotburger`
 - `obj_consumable_pizzaburger`
@@ -785,7 +785,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_consumable_milk`
 - `obj_consumable_tea`
 
-### `#EE7BF0` Crafting consumables
+### ![Pale Pink](colours/08_Pale_Pink.png) Crafting consumables
 - `obj_consumable_component`
 - `obj_consumable_multicomponent`
 - `obj_consumable_clay`
@@ -793,14 +793,14 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_consumable_soilbag`
 - `obj_consumable_glue`
 
-### `#F06767` Ammo & combat consumables
+### ![Pale Rose](colours/09_Pale_Rose.png) Ammo & combat consumables
 - `obj_consumable_inkammo`
 - `obj_consumable_cornade`
 - `obj_consumable_fireammo`
 - `obj_consumable_extinguisher`
 - `obj_consumable_glowstick`
 
-### `#222222` Terrain/voxel materials
+### ![Dark Gray](colours/31_Dark_Gray.png) Terrain/voxel materials
 - `obj_voxelmaterial_rich`
 - `obj_voxelmaterial_t1`
 - `obj_voxelmaterial_t3`
@@ -821,14 +821,14 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_voxelmaterialchunk_t4_medium`
 - `obj_voxelmaterialchunk_t4_large`
 
-### `#323000` Tree parts — logs
+### ![Dark Olive](colours/32_Dark_Olive.png) Tree parts — logs
 - `obj_harvest_log_s01`
 - `obj_harvest_log_m01`
 - `obj_harvest_log_l01`
 - `obj_harvest_log_l02a`
 - `obj_harvest_log_l02b`
 
-### `#375000` Tree parts — leaves/foliage
+### ![Forest](colours/33_Forest.png) Tree parts — leaves/foliage
 - `obj_harvests_trees_spruce02_p00`
 - `obj_harvests_trees_spruce02_p01`
 - `obj_harvests_trees_spruce02_p02`
@@ -915,7 +915,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_harvests_trees_pine03_p09`
 - `obj_harvests_trees_pine03_p10`
 
-### `#064023` Lighting fixtures
+### ![Bottle Green](colours/34_Bottle_Green.png) Lighting fixtures
 - `obj_light_headlight`
 - `obj_light_beamframelight`
 - `obj_light_factorylamp`
@@ -927,7 +927,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_light_rangelight`
 - `obj_light_rangelightlarge`
 
-### `#0A4444` Manmade decor
+### ![Dark Teal](colours/35_Dark_Teal.png) Manmade decor
 - `obj_manmade_scrapwall01`
 - `obj_manmade_scrapwallsmall`
 - `obj_manmade_scraproof01`
@@ -938,7 +938,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_manmade_holidayposter`
 - `obj_manmade_salesign`
 
-### `#0A1D5A` Potted plants
+### ![Navy](colours/36_Navy.png) Potted plants
 - `obj_plants_growbox`
 - `obj_plants_leafplant`
 - `obj_plants_succulent`
@@ -949,7 +949,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_plants_barbarycactus`
 - `obj_plants_blueflower`
 
-### `#35086C` Decorative containers
+### ![Indigo](colours/37_Indigo.png) Decorative containers
 - `obj_containers_woodbox`
 - `obj_containers_vegboxgreen`
 - `obj_containers_vegboxcucumber`
@@ -974,7 +974,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_containers_barrel_blueberry`
 - `obj_containers_barrel_tomato`
 
-### `#520653` Tape/barriers
+### ![Plum](colours/38_Plum.png) Tape/barriers
 - `obj_destructable_tape_doorwaytape01`
 - `obj_destructable_tape_doorwaytape01_destroyed`
 - `obj_destructable_tape_cornertape01`
@@ -1009,7 +1009,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_destructable_tape_big_walltape04`
 - `obj_destructable_tape_big_walltape05`
 
-### `#560202` Jewelry & artifacts
+### ![Maroon](colours/39_Maroon.png) Jewelry & artifacts
 - `obj_jewel_01`
 - `obj_jewel_02`
 - `obj_jewel_03`
@@ -1023,7 +1023,7 @@ When collecting items through pipes/crafters/the vacuum:
 - `obj_artifact_fossil11c`
 - `obj_artifact_fossil13`
 
-### `#472800` Rewards & loot
+### ![Dark Brown](colours/40_Dark_Brown.png) Rewards & loot
 - `obj_rewards_doorhandle`
 - `obj_shoprewards_farmbotbobblehead`
 - `obj_shoprewards_scrapmechanicbobblehead`
