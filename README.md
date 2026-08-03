@@ -28,7 +28,7 @@ Back up original files first, then replace both files:
 ## Paint colors: exact meaning in this mod
 
 You are right: generic names like "green"/"blue" are ambiguous.
-Use the exact color values below.
+This README now uses the swatch images from `/colours` instead of hex values.
 
 Palette reference (top = lightest row, bottom = darkest row):
 
@@ -36,10 +36,12 @@ Palette reference (top = lightest row, bottom = darkest row):
 
 ### Single-item chest colors (priority 3)
 
-These 20 colors make a chest single-item filtered:
+These 20 swatches make a chest single-item filtered:
 
-- Lightest row: `eeeeeeff`, `f5f071ff`, `cbf66fff`, `68ff88ff`, `7eededff`, `4c6fe3ff`, `ae79f0ff`, `ee7bf0ff`, `f06767ff`, `eeaf5cff`
-- Darkest row: `222222ff`, `323000ff`, `375000ff`, `064023ff`, `0a4444ff`, `0a1d5aff`, `35086cff`, `520653ff`, `560202ff`, `472800ff`
+- Lightest row:
+  ![White](colours/01_White.png) ![Pale Yellow](colours/02_Pale_Yellow.png) ![Pale Lime](colours/03_Pale_Lime.png) ![Pale Green](colours/04_Pale_Green.png) ![Pale Cyan](colours/05_Pale_Cyan.png) ![Pale Blue](colours/06_Pale_Blue.png) ![Pale Violet](colours/07_Pale_Violet.png) ![Pale Pink](colours/08_Pale_Pink.png) ![Pale Rose](colours/09_Pale_Rose.png) ![Pale Orange](colours/10_Pale_Orange.png)
+- Darkest row:
+  ![Dark Gray](colours/31_Dark_Gray.png) ![Dark Olive](colours/32_Dark_Olive.png) ![Forest](colours/33_Forest.png) ![Bottle Green](colours/34_Bottle_Green.png) ![Dark Teal](colours/35_Dark_Teal.png) ![Navy](colours/36_Navy.png) ![Indigo](colours/37_Indigo.png) ![Plum](colours/38_Plum.png) ![Maroon](colours/39_Maroon.png) ![Dark Brown](colours/40_Dark_Brown.png)
 
 Behavior:
 - If slot 1 already has an item, only that item is accepted.
@@ -47,17 +49,17 @@ Behavior:
 
 ### Category chest colors (priority 2)
 
-These exact color values enable category filtering:
+Use these swatches for category filtering:
 
-- `4a4a4aff` = Metal category
-- `0e8031ff` = Wood category
-- `817c00ff` = Stone/Glass/Tiles category
-- `577d07ff` = Carpet/Plastic/Bubblewrap category
-- `4c6fe3ff` = Pipes/Fittings category
-- `7c0000ff` = Vehicle parts category
-- `673b00ff` = Logic parts category
+- ![Gray](colours/21_Gray.png) = Metal category
+- ![Dark Green](colours/24_Dark_Green.png) = Wood category
+- ![Dark Yellow](colours/22_Dark_Yellow.png) = Stone/Glass/Tiles category
+- ![Olive](colours/23_Olive.png) = Carpet/Plastic/Bubblewrap category
+- ![Pale Blue](colours/06_Pale_Blue.png) = Pipes/Fittings category
+- ![Dark Red](colours/29_Dark_Red.png) = Vehicle parts category
+- ![Brown](colours/30_Brown.png) = Logic parts category
 
-Note: `4c6fe3ff` is also in the single-item color list, and single-item priority is higher; if you use that exact swatch, single-item behavior wins first.
+Note: the Pale Blue swatch is also in the single-item color list, and single-item priority is higher; if you use that exact swatch, single-item behavior wins first.
 
 ## Priority order in-game
 
@@ -79,7 +81,7 @@ When collecting items through pipes/crafters:
 
 ## Full category lists (exact values from `pipes.lua`)
 
-### `4a4a4aff` (Metal)
+### ![Gray](colours/21_Gray.png) Metal
 - `blk_metal1`
 - `blk_metal2`
 - `blk_metal3`
@@ -91,7 +93,7 @@ When collecting items through pipes/crafters:
 - `blk_spaceshipmetal`
 - `blk_lights`
 
-### `0e8031ff` (Wood)
+### ![Dark Green](colours/24_Dark_Green.png) Wood
 - `blk_cardboard`
 - `blk_wood1`
 - `blk_wood2`
@@ -99,7 +101,7 @@ When collecting items through pipes/crafters:
 - `blk_scrapwood`
 - `blk_caution`
 
-### `817c00ff` (Stone/Glass/Tiles)
+### ![Dark Yellow](colours/22_Dark_Yellow.png) Stone/Glass/Tiles
 - `blk_sand`
 - `blk_concrete1`
 - `blk_concrete2`
@@ -111,12 +113,12 @@ When collecting items through pipes/crafters:
 - `blk_glasstile`
 - `blk_tiles`
 
-### `577d07ff` (Carpet/Plastic/Bubblewrap)
+### ![Olive](colours/23_Olive.png) Carpet/Plastic/Bubblewrap
 - `blk_carpet`
 - `blk_plastic`
 - `blk_bubblewrap`
 
-### `4c6fe3ff` (Pipes/Fittings)
+### ![Pale Blue](colours/06_Pale_Blue.png) Pipes/Fittings
 - `small_2way_pipe`
 - `small_2wayb_pipe`
 - `small_3way_pipe`
@@ -132,7 +134,7 @@ When collecting items through pipes/crafters:
 - `obj_fittings_pipelong`
 - `obj_fittings_pipevalve`
 
-### `7c0000ff` (Vehicle parts)
+### ![Dark Red](colours/29_Dark_Red.png) Vehicle parts
 - `obj_interactive_driversaddle_01`
 - `obj_interactive_driversaddle_02`
 - `obj_interactive_driversaddle_03`
@@ -188,7 +190,7 @@ When collecting items through pipes/crafters:
 - `obj_vehicle_smallwheel`
 - `obj_vehicle_bigwheel`
 
-### `673b00ff` (Logic parts)
+### ![Brown](colours/30_Brown.png) Logic parts
 - `obj_interactive_controller_01`
 - `obj_interactive_controller_02`
 - `obj_interactive_controller_03`
